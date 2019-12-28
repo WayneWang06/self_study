@@ -1,0 +1,18 @@
+# 123 -> 321
+# -123 -> -321
+def reverse(num):
+    if -10 < num < 10:
+        return num
+    str_num = str(num)
+    if str_num[0] != '-':
+        str_num = str_num[::-1]
+        num = int(str_num)
+    else:
+        str_num = str_num[:0:-1]
+        num = -int(str_num)
+
+    return num if -2147483648 < x < 2147483647 else 0
+
+print(reverse(-12345))
+print(reverse(-9))
+print(reverse(12345))
